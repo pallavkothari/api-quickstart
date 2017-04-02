@@ -1,0 +1,283 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "get started quickly",
+    "version": "v1",
+    "title": "api quickstart",
+    "termsOfService": "https://github.com/pallavkothari",
+    "contact": {
+      "name": "PK",
+      "url": "https://github.com/pallavkothari",
+      "email": "fake@spam.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  },
+  "host": "example.com",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "api-quickstart-application",
+      "description": "Api Quickstart Application"
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "tags": [
+          "api-quickstart-application"
+        ],
+        "summary": "index",
+        "operationId": "indexUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/RedirectView"
+            }
+          }
+        }
+      },
+      "head": {
+        "tags": [
+          "api-quickstart-application"
+        ],
+        "summary": "index",
+        "operationId": "indexUsingHEAD",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/RedirectView"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "api-quickstart-application"
+        ],
+        "summary": "index",
+        "operationId": "indexUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/RedirectView"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "api-quickstart-application"
+        ],
+        "summary": "index",
+        "operationId": "indexUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/RedirectView"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "api-quickstart-application"
+        ],
+        "summary": "index",
+        "operationId": "indexUsingDELETE",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/RedirectView"
+            }
+          }
+        }
+      },
+      "options": {
+        "tags": [
+          "api-quickstart-application"
+        ],
+        "summary": "index",
+        "operationId": "indexUsingOPTIONS",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/RedirectView"
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "api-quickstart-application"
+        ],
+        "summary": "index",
+        "operationId": "indexUsingPATCH",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/RedirectView"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "ApplicationContext": {
+      "type": "object",
+      "properties": {
+        "applicationName": {
+          "type": "string"
+        },
+        "autowireCapableBeanFactory": {
+          "$ref": "#/definitions/AutowireCapableBeanFactory"
+        },
+        "beanDefinitionCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "beanDefinitionNames": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "classLoader": {
+          "$ref": "#/definitions/ClassLoader"
+        },
+        "displayName": {
+          "type": "string"
+        },
+        "environment": {
+          "$ref": "#/definitions/Environment"
+        },
+        "id": {
+          "type": "string"
+        },
+        "parentBeanFactory": {
+          "$ref": "#/definitions/BeanFactory"
+        },
+        "startupDate": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "RedirectView": {
+      "type": "object",
+      "properties": {
+        "applicationContext": {
+          "$ref": "#/definitions/ApplicationContext"
+        },
+        "attributesMap": {
+          "type": "object"
+        },
+        "beanName": {
+          "type": "string"
+        },
+        "exposePathVariables": {
+          "type": "boolean"
+        },
+        "hosts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "propagateQueryProperties": {
+          "type": "boolean"
+        },
+        "redirectView": {
+          "type": "boolean"
+        },
+        "requestContextAttribute": {
+          "type": "string"
+        },
+        "staticAttributes": {
+          "type": "object"
+        },
+        "url": {
+          "type": "string"
+        }
+      }
+    },
+    "BeanFactory": {
+      "type": "object"
+    },
+    "ClassLoader": {
+      "type": "object"
+    },
+    "Environment": {
+      "type": "object",
+      "properties": {
+        "activeProfiles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "defaultProfiles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "AutowireCapableBeanFactory": {
+      "type": "object"
+    }
+  }
+}
