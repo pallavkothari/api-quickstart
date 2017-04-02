@@ -33,9 +33,16 @@
 		<springfox.version>2.4.0</springfox.version>
         <jodatime-version>2.9.3</jodatime-version>
 		<client.artifactVersion>0.3-SNAPSHOT</client.artifactVersion>
+		<lombok.version>1.16.16</lombok.version>
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<scope>provided</scope>
+		</dependency>
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
