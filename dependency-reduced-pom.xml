@@ -173,6 +173,11 @@
             </goals>
           </execution>
         </executions>
+        <configuration>
+          <excludes>
+            <exclude>com/pk/client/**/*.*</exclude>
+          </excludes>
+        </configuration>
       </plugin>
     </plugins>
   </build>
