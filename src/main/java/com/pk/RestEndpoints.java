@@ -1,5 +1,7 @@
 package com.pk;
 
+import com.codahale.metrics.annotation.ExceptionMetered;
+import com.codahale.metrics.annotation.Timed;
 import com.pk.model.Person;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
@@ -19,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class RestEndpoints {
 
+    @Timed @ExceptionMetered
     @RequestMapping(value = "/{firstName}/{lastName}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public Person get(@PathVariable("firstName") String firstName,
                       @PathVariable("lastName") String lastName) {
